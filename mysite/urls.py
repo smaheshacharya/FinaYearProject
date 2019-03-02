@@ -21,10 +21,8 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('signup/', views.signup, name='signup'),
-    # path(r'^static/(?P<path>.*)$',views.serve),
-    path('home/', views.home, name='home'),
     path('login/', views.login, name='login'),
-    path('ecommerce/', views.ecommerce, name='login'),
+    path('register/', views.register, name='register'),
+    path('register/', views.shop_grid, name='shop_grid'),
 
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

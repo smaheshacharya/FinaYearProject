@@ -1,35 +1,6 @@
+{%extends 'layout/base.html'%}
+{% block content %}
 
-{%load staticfiles %}
-<!doctype html>
-<html class="no-js" lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>NepGirl - Girl, Women's Online Shopping in Nepal with VR Experience | Try Online</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
-
-    <!-- CSS
-	============================================ -->
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
-
-    <!-- Icon Font CSS -->
-    <link rel="stylesheet" href="{%static 'assets/css/icon-font.min.css'%}">
-
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="{%static 'assets/css/plugins.css'%}">
-
-    <!-- Main Style CSS -->
-    <link rel="stylesheet" href="{%static 'assets/css/style.css'%}">
-
-    <!-- Modernizer JS -->
-    <script src="{%static 'assets/js/vendor/modernizr-2.8.3.min.js'%}"></script>
-</head>
 
 <body>
 
@@ -73,7 +44,7 @@
                 <div class="col order-2 order-xs-2 order-lg-12 mt-10 mb-10">
                     <!-- Header Account Links Start -->
                     <div class="header-account-links">
-                        <a href="register.html"><i class="icofont icofont-user-alt-7"></i> <span>my account</span></a>
+                        <a href="{%url 'register' %}"><i class="icofont icofont-user-alt-7"></i> <span>my account</span></a>
                         <a href="login.html"><i class="icofont icofont-login d-none"></i> <span>Login</span></a>
                     </div><!-- Header Account Links End -->
                 </div>
@@ -103,11 +74,11 @@
                         <nav>
                             <ul>
                                 <li class="active"><a href="index.html">HOME</a></li>
-                                <li class="menu-item-has-children"><a href="shop-grid.html">Shop</a>
+                                <li class="menu-item-has-children"><a href="{%url 'shop_grid'%}">Shop</a>
                                     <ul class="sub-menu">
-                                        <li class="menu-item-has-children"><a href="shop-grid.html">shop grid</a>
+                                        <li class="menu-item-has-children"><a href="{%url 'shop_grid'%}">shop grid</a>
                                             <ul class="sub-menu">
-                                                <li><a href="shop-grid.html">shop grid</a></li>
+                                                <li><a href="{%url 'shop_grid'%}">shop grid</a></li>
                                             </ul>
                                         </li>
                                         <li class="menu-item-has-children"><a href="single-product.html">Single Product</a>
@@ -2619,20 +2590,5 @@
 <!-- JS
 ============================================ -->
 
-<!-- jQuery JS -->
 
-
-<script src="{%static 'assets/js/vendor/jquery-1.12.4.min.js'%}"></script>
-<!-- Popper JS -->
-<script src="{%static 'assets/js/popper.min.js'%}"></script>
-<!-- Bootstrap JS -->
-<script src="{%static 'assets/js/bootstrap.min.js'%}"></script>
-<!-- Plugins JS -->
-<script src="{%static 'assets/js/plugins.js'%}"></script>
-
-<!-- Main JS -->
-<script src="{%static 'assets/js/main.js'%}"></script>
-
-</body>
-
-</html>
+{% endblock %}
