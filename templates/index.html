@@ -1,7 +1,7 @@
 {%extends 'layout/base.html'%}
 {% block content %}
 
-
+{% load staticfiles%}
 <body>
 
 <!-- Header Section Start -->
@@ -15,8 +15,8 @@
                 <div class="col mt-10 mb-10">
                     <!-- Header Links Start -->
                     <div class="header-links">
-                        <a href="track-order.html"><img src="assets/images/icons/car.png" alt="Car Icon"> <span>Track your order</span></a>
-                        <a href="store.html"><img src="assets/images/icons/marker.png" alt="Car Icon"> <span>Locate Store</span></a>
+                        <a href="track-order.html"><img src="{% static 'assets/images/icons/car.png' %}" alt="Car Icon"> <span>Track your order</span></a>
+                        <a href="store.html"><img src="{% static 'assets/images/icons/marker.png' %}" alt="Car Icon"> <span>Locate Store</span></a>
                     </div><!-- Header Links End -->
                 </div>
 
@@ -45,7 +45,7 @@
                     <!-- Header Account Links Start -->
                     <div class="header-account-links">
                         <a href="{%url 'register' %}"><i class="icofont icofont-user-alt-7"></i> <span>my account</span></a>
-                        <a href="login.html"><i class="icofont icofont-login d-none"></i> <span>Login</span></a>
+                        <a href="{%url 'login' %}"><i class="icofont icofont-login d-none"></i> <span>Login</span></a>
                     </div><!-- Header Account Links End -->
                 </div>
 
@@ -62,7 +62,7 @@
                     <!-- Logo Start -->
                     <div class="header-logo">
                         <a href="index.html">
-                            <img src="assets/images/logo.png" height="50px" alt="E&E - Electronics eCommerce Bootstrap4 HTML Template"> Nep Girl
+                            <img src="{% static 'assets/images/logo.png' %}" height="50px" alt="E&E - Electronics eCommerce Bootstrap4 HTML Template"> Nep Girl
                             <img class="theme-dark" src="assets/images/logo-light.png" alt="E&E - Electronics eCommerce Bootstrap4 HTML Template">
                         </a>
                     </div><!-- Logo End -->
@@ -337,7 +337,7 @@
 
             <!-- Banner -->
             <div class="col-md-4 col-12 mb-30">
-                <div class="banner"><a href="#"><img src="assets/images/banner/banner-2.jpg" alt="Banner"></a></div>
+                <div class="banner"><a href="#"><img src="{% static 'assets/images/banner/banner-2.jpg' %}" alt="Banner"></a></div>
             </div>
 
         </div>
@@ -384,7 +384,7 @@
                                         <!-- Image -->
                                         <div class="image">
 
-                                            <a href="single-product.html" class="img"><img src="assets/images/product/product-1.png" alt="Product Image"></a>
+                                            <a href="single-product.html" class="img"><img src="{% static 'assets/images/product/product-1.png' %}" alt="Product Image"></a>
 
                                             <div class="wishlist-compare">
                                                 <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
@@ -434,7 +434,7 @@
 
                                             <span class="label sale">sale</span>
 
-                                            <a href="single-product.html" class="img"><img src="assets/images/product/product-2.png" alt="Product Image"></a>
+                                            <a href="single-product.html" class="img"><img src="{% static 'assets/images/product/product-2.png' %}" alt="Product Image"></a>
 
                                             <div class="wishlist-compare">
                                                 <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
@@ -482,7 +482,7 @@
                                         <!-- Image -->
                                         <div class="image">
 
-                                            <a href="single-product.html" class="img"><img src="assets/images/product/product-3.png" alt="Product Image"></a>
+                                            <a href="single-product.html" class="img"><img src="{%static 'assets/images/product/product-3.png' %}" alt="Product Image"></a>
 
                                             <div class="wishlist-compare">
                                                 <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
@@ -530,7 +530,7 @@
                                         <!-- Image -->
                                         <div class="image">
 
-                                            <a href="single-product.html" class="img"><img src="assets/images/product/product-4.png" alt="Product Image"></a>
+                                            <a href="single-product.html" class="img"><img src="{%static 'assets/images/product/product-4.png' %}" alt="Product Image"></a>
 
                                             <div class="wishlist-compare">
                                                 <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
@@ -578,7 +578,7 @@
                                         <!-- Image -->
                                         <div class="image">
 
-                                            <a href="single-product.html" class="img"><img src="assets/images/product/product-5.png" alt="Product Image"></a>
+                                            <a href="single-product.html" class="img"><img src="{%static 'assets/images/product/product-5.png' %}" alt="Product Image"></a>
 
                                             <div class="wishlist-compare">
                                                 <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
@@ -641,7 +641,7 @@
 
                                             <span class="label sale">sale</span>
 
-                                            <a href="single-product.html" class="img"><img src="assets/images/product/product-6.png" alt="Product Image"></a>
+                                            <a href="single-product.html" class="img"><img src="{%static 'assets/images/product/product-6.png' %}" alt="Product Image"></a>
 
                                             <div class="wishlist-compare">
                                                 <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
@@ -910,7 +910,7 @@
                             <!-- Image -->
                             <div class="image">
 
-                                <a href="single-product.html" class="img"><img src="assets/images/product/product-5.png" alt="Product Image"></a>
+                                <a href="single-product.html" class="img"><img src="{%static 'assets/images/product/product-5.png'%}" alt="Product Image"></a>
 
                                 <div class="wishlist-compare">
                                     <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
@@ -960,7 +960,7 @@
 
                                 <span class="label sale">sale</span>
 
-                                <a href="single-product.html" class="img"><img src="assets/images/product/product-6.png" alt="Product Image"></a>
+                                <a href="single-product.html" class="img"><img src="{%static 'assets/images/product/product-6.png'%}" alt="Product Image"></a>
 
                                 <div class="wishlist-compare">
                                     <a href="#" data-tooltip="Compare"><i class="ti-control-shuffle"></i></a>
