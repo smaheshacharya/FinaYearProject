@@ -12,3 +12,9 @@ class Question(models.Model):
 # class LoginForm(forms.Form):
 #     username = forms.CharField()
 #     password = forms.CharField(widget=form.PasswordInput)
+class Products(models.Model):
+    title = models.CharField(max_length=120 )
+    description = models.TextField(blank=True,null=True)
+    price = models.IntegerField(default=0)
+    summary = models.TextField(blank=False,null=False)
+    featured = models.BooleanField(default=True)
